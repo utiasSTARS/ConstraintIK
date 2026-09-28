@@ -1,0 +1,298 @@
+{
+  "args": {
+    "stage": "eval",
+    "robots": [
+      "ur5",
+      "franka"
+    ],
+    "sizes": [
+      500,
+      1000,
+      2000,
+      5000,
+      10000,
+      20000,
+      40000
+    ],
+    "seed": 0,
+    "data_root": "data/size_sweep",
+    "model": "joint",
+    "ckpt_root": "checkpoints/size_sweep",
+    "out": null,
+    "device": "cuda:0"
+  },
+  "budget": {
+    "ur5": {
+      "se3": [
+        50,
+        512
+      ],
+      "posonly": [
+        50,
+        512
+      ],
+      "plane": [
+        50,
+        512
+      ],
+      "line": [
+        50,
+        512
+      ],
+      "orient": [
+        50,
+        512
+      ],
+      "plane_orient": [
+        50,
+        512
+      ],
+      "line_orient": [
+        50,
+        512
+      ]
+    },
+    "franka": {
+      "se3": [
+        10,
+        32
+      ],
+      "posonly": [
+        10,
+        32
+      ],
+      "plane": [
+        10,
+        32
+      ],
+      "line": [
+        10,
+        32
+      ],
+      "orient": [
+        20,
+        256
+      ],
+      "plane_orient": [
+        10,
+        32
+      ],
+      "line_orient": [
+        20,
+        256
+      ]
+    }
+  },
+  "validity": "loose",
+  "seconds": 619.8,
+  "records": [
+    {
+      "robot": "ur5",
+      "constraint": "se3",
+      "N": null,
+      "intrinsic_dim": 0,
+      "n_instances": 50,
+      "n_samples_per_instance": 512,
+      "valid_pct": 99.1796875,
+      "per_instance_valid_mean": 0.991796875,
+      "per_instance_valid_std": 0.011110517697912416,
+      "mode_coverage_mean": 1.0,
+      "pos_err_mm_mean": 9.124836877976772,
+      "pos_err_mm_std": 6.100167122301504,
+      "orn_err_deg_mean": 2.281522627396363,
+      "orn_err_deg_std": 1.6196977590015214
+    },
+    {
+      "robot": "ur5",
+      "constraint": "posonly",
+      "N": null,
+      "intrinsic_dim": 3,
+      "n_instances": 50,
+      "n_samples_per_instance": 512,
+      "valid_pct": 99.921875,
+      "per_instance_valid_mean": 0.99921875,
+      "per_instance_valid_std": 0.002561499423555469,
+      "mode_coverage_mean": null,
+      "pos_err_mm_mean": 11.689958771215137,
+      "pos_err_mm_std": 9.926278927083402
+    },
+    {
+      "robot": "ur5",
+      "constraint": "plane",
+      "N": null,
+      "intrinsic_dim": 5,
+      "n_instances": 50,
+      "n_samples_per_instance": 512,
+      "valid_pct": 99.99609375,
+      "per_instance_valid_mean": 0.9999609375,
+      "per_instance_valid_std": 0.0002734375,
+      "mode_coverage_mean": null,
+      "pos_err_mm_mean": 4.668120144570727,
+      "pos_err_mm_std": 3.8645284777202984
+    },
+    {
+      "robot": "ur5",
+      "constraint": "line",
+      "N": null,
+      "intrinsic_dim": 4,
+      "n_instances": 50,
+      "n_samples_per_instance": 512,
+      "valid_pct": 100.0,
+      "per_instance_valid_mean": 1.0,
+      "per_instance_valid_std": 0.0,
+      "mode_coverage_mean": null,
+      "pos_err_mm_mean": 7.239205962311143,
+      "pos_err_mm_std": 4.554377603206359
+    },
+    {
+      "robot": "ur5",
+      "constraint": "orient",
+      "N": null,
+      "intrinsic_dim": 3,
+      "n_instances": 50,
+      "n_samples_per_instance": 512,
+      "valid_pct": 99.48046875,
+      "per_instance_valid_mean": 0.9948046875,
+      "per_instance_valid_std": 0.015583979356943986,
+      "mode_coverage_mean": null,
+      "orn_err_deg_mean": 1.9618780188722889,
+      "orn_err_deg_std": 1.4120755795404654
+    },
+    {
+      "robot": "ur5",
+      "constraint": "plane_orient",
+      "N": null,
+      "intrinsic_dim": 2,
+      "n_instances": 50,
+      "n_samples_per_instance": 512,
+      "valid_pct": 99.94921875,
+      "per_instance_valid_mean": 0.9994921875,
+      "per_instance_valid_std": 0.0009415602182182772,
+      "mode_coverage_mean": null,
+      "pos_err_mm_mean": 4.890045932669552,
+      "pos_err_mm_std": 4.125512821147709,
+      "orn_err_deg_mean": 1.7191809361431183,
+      "orn_err_deg_std": 0.9689920455636776
+    },
+    {
+      "robot": "ur5",
+      "constraint": "line_orient",
+      "N": null,
+      "intrinsic_dim": 2,
+      "n_instances": 50,
+      "n_samples_per_instance": 512,
+      "valid_pct": 96.0390625,
+      "per_instance_valid_mean": 0.960390625,
+      "per_instance_valid_std": 0.06507751537829713,
+      "mode_coverage_mean": null,
+      "pos_err_mm_mean": 7.771685916744315,
+      "pos_err_mm_std": 5.435207129416447,
+      "orn_err_deg_mean": 3.472460593967227,
+      "orn_err_deg_std": 2.8768545964211123
+    },
+    {
+      "robot": "franka",
+      "constraint": "se3",
+      "N": null,
+      "intrinsic_dim": 1,
+      "n_instances": 10,
+      "n_samples_per_instance": 32,
+      "valid_pct": 99.375,
+      "per_instance_valid_mean": 0.99375,
+      "per_instance_valid_std": 0.01875,
+      "mode_coverage_mean": 0.5867949280341067,
+      "pos_err_mm_mean": 11.973775978375961,
+      "pos_err_mm_std": 7.538625656107205,
+      "orn_err_deg_mean": 2.4383949837583563,
+      "orn_err_deg_std": 1.2298141999471386
+    },
+    {
+      "robot": "franka",
+      "constraint": "posonly",
+      "N": null,
+      "intrinsic_dim": 4,
+      "n_instances": 10,
+      "n_samples_per_instance": 32,
+      "valid_pct": 100.0,
+      "per_instance_valid_mean": 1.0,
+      "per_instance_valid_std": 0.0,
+      "mode_coverage_mean": null,
+      "pos_err_mm_mean": 12.485137259751559,
+      "pos_err_mm_std": 7.730060771295998
+    },
+    {
+      "robot": "franka",
+      "constraint": "plane",
+      "N": null,
+      "intrinsic_dim": 6,
+      "n_instances": 10,
+      "n_samples_per_instance": 32,
+      "valid_pct": 100.0,
+      "per_instance_valid_mean": 1.0,
+      "per_instance_valid_std": 0.0,
+      "mode_coverage_mean": null,
+      "pos_err_mm_mean": 4.097207541467552,
+      "pos_err_mm_std": 3.433596314850599
+    },
+    {
+      "robot": "franka",
+      "constraint": "line",
+      "N": null,
+      "intrinsic_dim": 5,
+      "n_instances": 10,
+      "n_samples_per_instance": 32,
+      "valid_pct": 100.0,
+      "per_instance_valid_mean": 1.0,
+      "per_instance_valid_std": 0.0,
+      "mode_coverage_mean": null,
+      "pos_err_mm_mean": 8.199005811104973,
+      "pos_err_mm_std": 5.561004320902515
+    },
+    {
+      "robot": "franka",
+      "constraint": "orient",
+      "N": null,
+      "intrinsic_dim": 4,
+      "n_instances": 20,
+      "n_samples_per_instance": 256,
+      "valid_pct": 95.80078125,
+      "per_instance_valid_mean": 0.9580078125,
+      "per_instance_valid_std": 0.17677615581615275,
+      "mode_coverage_mean": null,
+      "orn_err_deg_mean": 2.299583595224885,
+      "orn_err_deg_std": 1.5272827779840819
+    },
+    {
+      "robot": "franka",
+      "constraint": "plane_orient",
+      "N": null,
+      "intrinsic_dim": 3,
+      "n_instances": 10,
+      "n_samples_per_instance": 32,
+      "valid_pct": 100.0,
+      "per_instance_valid_mean": 1.0,
+      "per_instance_valid_std": 0.0,
+      "mode_coverage_mean": null,
+      "pos_err_mm_mean": 4.716589964467362,
+      "pos_err_mm_std": 4.049743955997309,
+      "orn_err_deg_mean": 2.2356599830399757,
+      "orn_err_deg_std": 1.2978649454177962
+    },
+    {
+      "robot": "franka",
+      "constraint": "line_orient",
+      "N": null,
+      "intrinsic_dim": 3,
+      "n_instances": 20,
+      "n_samples_per_instance": 256,
+      "valid_pct": 99.23828125,
+      "per_instance_valid_mean": 0.9923828125,
+      "per_instance_valid_std": 0.013726175649073516,
+      "mode_coverage_mean": null,
+      "pos_err_mm_mean": 10.732820688465345,
+      "pos_err_mm_std": 9.371117725887347,
+      "orn_err_deg_mean": 2.0448225788558143,
+      "orn_err_deg_std": 1.4984416190444065
+    }
+  ]
+}

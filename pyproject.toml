@@ -1,0 +1,45 @@
+[build-system]
+requires = ["setuptools>=64"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "constraint-ik"
+version = "1.0.0"
+description = "Exploring the Intrinsic Geometry of Diffusion Models with Constrained Inverse Kinematics (CoRL 2026)"
+readme = "README.md"
+license = { text = "MIT" }
+requires-python = ">=3.10,<3.11"   # ikfast_pybind does not build on 3.11+
+authors = [
+    { name = "Miguel Angel Rogel Garcia" },
+    { name = "Phone Thiha Kyaw" },
+    { name = "Jonathan Kelly" },
+]
+dependencies = [
+    "torch",
+    "numpy<2",
+    "scipy",
+    "scikit-learn",
+    "matplotlib",
+    "tqdm",
+    "ikfast_pybind==0.1.2",
+    "huggingface_hub",
+]
+
+[project.optional-dependencies]
+viz = ["viser", "yourdfpy", "trimesh", "imageio[ffmpeg]", "playwright"]
+test = ["pytest"]
+# Versions used to produce the paper results.
+pinned = [
+    "torch==2.4.1",
+    "numpy==1.24.4",
+    "scipy==1.10.1",
+    "scikit-learn==1.3.2",
+    "matplotlib==3.7.5",
+]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+filterwarnings = ["ignore:.*deprecated - use"]

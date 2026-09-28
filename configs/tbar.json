@@ -1,0 +1,62 @@
+{
+ "franka": {
+  "line": {
+   "linear": 60,
+   "slerp": 60
+  },
+  "line_orient": {
+   "linear": 60,
+   "slerp": 85
+  },
+  "orient": {
+   "linear": 50,
+   "slerp": 50
+  },
+  "plane": {
+   "linear": 85,
+   "slerp": 90
+  },
+  "plane_orient": {
+   "linear": 80,
+   "slerp": 90
+  },
+  "posonly": {
+   "linear": 95,
+   "slerp": 95
+  },
+  "se3": {
+   "linear": 95,
+   "slerp": 95
+  }
+ },
+ "ur5": {
+  "line": {
+   "linear": 90,
+   "slerp": 80
+  },
+  "line_orient": {
+   "linear": 90,
+   "slerp": 70
+  },
+  "orient": {
+   "linear": 60,
+   "slerp": 60
+  },
+  "plane": {
+   "linear": 50,
+   "slerp": 60
+  },
+  "plane_orient": {
+   "linear": 60,
+   "slerp": 60
+  },
+  "posonly": {
+   "linear": 95,
+   "slerp": 95
+  },
+  "se3": {
+   "linear": 95,
+   "slerp": 95
+  }
+ }
+}

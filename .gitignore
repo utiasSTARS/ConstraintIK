@@ -1,0 +1,24 @@
+# Build products and large outputs
+outputs/
+figures/
+tables/
+checkpoints/
+data/
+
+# Python
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+*.egg-info/
+build/
+dist/
+.pytest_cache/
+
+# Editors and OS
+.DS_Store
+.idea/
+.vscode/
+
+# paper figure panels (regenerate with scripts/render_media.py --paper)
+docs/paper_renders/
